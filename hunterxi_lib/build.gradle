@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "0.1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api 'androidx.appcompat:appcompat:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    api 'androidx.recyclerview:recyclerview:1.0.0'
+
+    //--------------------------- 网络请求框架 start ---------------------------
+    // 导入retrofit
+    api 'com.squareup.retrofit2:retrofit:2.5.0'
+    // 转换器，请求结果转换成Model
+    api 'com.squareup.retrofit2:converter-gson:2.5.0'
+    // 配合Rxjava 使用
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    // 导入RxJava
+    api 'io.reactivex.rxjava2:rxjava:2.2.8'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    // 导入okhttp3
+    api("com.squareup.okhttp3:okhttp:3.14.1")
+    //--------------------------- 网络请求框架 end ---------------------------
+
+    // 日志打印
+    api 'com.orhanobut:logger:2.2.0'
+
+    // 依赖注入
+    api 'com.jakewharton:butterknife:10.1.0'
+
+    // 图片加载
+    api 'com.github.bumptech.glide:glide:4.9.0'
+
+    // 广告轮播插件
+    api 'com.bigkoo:convenientbanner:2.1.5'
+
+    // 事件总线 RxBus 依赖
+    api 'com.jakewharton.rxrelay2:rxrelay:2.1.0'
+
+}

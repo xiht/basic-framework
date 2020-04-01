@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HunterXiLib</string>
+
+    <!-- 页面组件说明 Start -->
+    <string name="view_launch_image">应用启动图片加载控件</string>
+    <!-- 页面组件说明 End -->
+</resources>

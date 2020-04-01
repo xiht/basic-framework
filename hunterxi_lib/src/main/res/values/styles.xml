@@ -1,0 +1,12 @@
+<resources>
+
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!-- 基本Theme,没有没有标题栏 -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <!-- 全屏theme -->
+    <style name="FullscreenTheme" parent="BaseAppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
