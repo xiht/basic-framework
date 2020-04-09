@@ -41,7 +41,7 @@
                     .create(BaseApi.class);
             api.downloadFile(url) // url文件下载链接
                     .subscribeOn(Schedulers.io())
-                    .observeOn(Schedulers.io())
+                    .observeOn(Schedulers.io())    // 此处不可使用AndroidSchedulers.mainThread()，否则报错android.os.NetworkOnMainThreadException
                     .subscribe(new BaseObserver<ResponseBody>() {
                         @Override
                         protected void onRequestStart() {
@@ -131,9 +131,11 @@
 （6）StringUtil
 字符串工具类，判断字符是否为空等<br> 
 （7）SSLSocketUtil
-处理Https请求中必要的工具类<br> 
+处理Https请求中必要的工具类<br>
 （8）DateUtil 
-时间管理工具类
+时间管理工具类<br>
+（9）GsonUtils
+对象转Json字符串，字符串转Json对象
 
 ## 11.事件总线：
 ### （1）LiveDataBus：
